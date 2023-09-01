@@ -1,1 +1,1573 @@
-Console.WriteLine();
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CS_Project_Final
+{
+    internal class Program
+    {
+        public static char Char1;
+        public static char Char2;
+        public static char Char3;
+        public static char Char4;
+        public static char Char5;
+        public static char Char6;
+        public static char Char7;
+        public static char Char8;
+        public static char Char9;
+        public static char Char10;
+        public static char Char11;
+        public static char Char12;
+        public static char Char13;
+        public static char Char14;
+        public static char Char15;
+        public static char Char16;
+        public static char Char17;
+        public static char Char18;
+        public static char Char19;
+        public static char Char20;
+        public static char Char21;
+        public static char Char22;
+        public static char Char23;
+        public static char Char24;
+
+        public static string P1;
+        public static string P2;
+        public static string P3;
+        public static string P4;
+        public static string P5;
+        public static string P6;
+        public static string P7;
+        public static string P8;
+        public static string P9;
+        public static string P10;
+        public static string P11;
+        public static string P12;
+        public static string P13;
+        public static string P14;
+        public static string P15;
+        public static string P16;
+        public static string P17;
+        public static string P18;
+        public static string P19;
+        public static string P20;
+        public static string P21;
+        public static string P22;
+        public static string P23;
+        public static string P24;
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        public static void GeneratePassword()
+        {
+            //we do some string manipulation, use a randon num generator, pick out a random amount of letters from the string, add them all into A password string
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Would you like to Generate a Randomised Password?");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Y");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("/");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write("N");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            string Y = Console.ReadLine();
+            string Loop = "";
+
+            while (!(Y == "Y" || Y == "Yes" || Y == "y" || Y == "yes" || Y == "N" || Y == "n" || Y == "No" || Y == "no"))
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("Input a valid answer.");
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.White;
+                Y = Console.ReadLine();
+            }
+            if (Y == "Y" || Y == "Yes" || Y == "y" || Y == "yes")
+            {
+                //string PasswordChoice = "abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890";
+                string PasswordChoice = "0987654321!$%^&()-_=+abcdefghijkmnlopqrstuvwxyz1234567890ABCDEFGHIKMNLOPQRSTUVWXYZ!$%^&()-_=+1234567890abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890!$%^&()-_=+";
+
+                Random numgen = new Random();
+
+                int num = numgen.Next(0, PasswordChoice.Length);
+                int num2 = numgen.Next(0, PasswordChoice.Length);
+                int num3 = numgen.Next(0, PasswordChoice.Length);
+                int num4 = numgen.Next(0, PasswordChoice.Length);
+                int num5 = numgen.Next(0, PasswordChoice.Length);
+                int num6 = numgen.Next(0, PasswordChoice.Length);
+                int num7 = numgen.Next(0, PasswordChoice.Length);
+                int num8 = numgen.Next(0, PasswordChoice.Length);
+                int num9 = numgen.Next(0, PasswordChoice.Length);
+                int num10 = numgen.Next(0, PasswordChoice.Length);
+                int num11 = numgen.Next(0, PasswordChoice.Length);
+                int num12 = numgen.Next(0, PasswordChoice.Length);
+                //int num13 = numgen.Next(0, PasswordChoice.Length);
+                //int num14 = numgen.Next(0, PasswordChoice.Length);
+                //int num15 = numgen.Next(0, PasswordChoice.Length);
+                //int num16 = numgen.Next(0, PasswordChoice.Length);
+                //int num17 = numgen.Next(0, PasswordChoice.Length);
+                //int num18 = numgen.Next(0, PasswordChoice.Length);
+                //int num19 = numgen.Next(0, PasswordChoice.Length);
+                //int num20 = numgen.Next(0, PasswordChoice.Length);
+
+                //Console.WriteLine("Password Choice Letters = ");
+                //Console.Write(PasswordChoice[num]);
+                //Console.Write(PasswordChoice[num2]);
+                //Console.Write(PasswordChoice[num3]);
+                //Console.Write(PasswordChoice[num4]);
+                //Console.Write(PasswordChoice[num5]);
+                //Console.Write(PasswordChoice[num6]);
+                //Console.Write(PasswordChoice[num7]);
+                //Console.Write(PasswordChoice[num8]);
+                //Console.Write(PasswordChoice[num9]);
+                //Console.Write(PasswordChoice[num10]);
+                //Console.Write(PasswordChoice[num11]);
+                //Console.Write(PasswordChoice[num12]);
+                //Console.Write(PasswordChoice[num13]);
+                //Console.Write(PasswordChoice[num14]);
+                //Console.Write(PasswordChoice[num15]);
+                //Console.Write(PasswordChoice[num16]);
+                //Console.Write(PasswordChoice[num17]);
+                //Console.Write(PasswordChoice[num18]);
+                //Console.Write(PasswordChoice[num19]);
+                //Console.Write(PasswordChoice[num20]);
+
+                var Char1 = PasswordChoice[num];
+                var Char2 = PasswordChoice[num2];
+                var Char3 = PasswordChoice[num3];
+                var Char4 = PasswordChoice[num4];
+                var Char5 = PasswordChoice[num5];
+                var Char6 = PasswordChoice[num6];
+                var Char7 = PasswordChoice[num7];
+                var Char8 = PasswordChoice[num8];
+                var Char9 = PasswordChoice[num9];
+                var Char10 = PasswordChoice[num10];
+                var Char11 = PasswordChoice[num11];
+                var Char12 = PasswordChoice[num12];
+                //var Char13 = PasswordChoice[num13];
+                //var Char14 = PasswordChoice[num14];
+                //var Char15 = PasswordChoice[num15];
+                //var Char16 = PasswordChoice[num16];
+                //var Char17 = PasswordChoice[num17];
+                //var Char18 = PasswordChoice[num18];
+                //var Char19 = PasswordChoice[num19];
+                //var Char20 = PasswordChoice[num20];
+
+                //Console.Write(Char1);
+                //Console.Write(Char2);
+                //Console.Write(Char3);
+                //Console.Write(Char4);
+                //Console.Write(Char5);
+                //Console.Write(Char6);
+                //Console.Write(Char7);
+                //Console.Write(Char8);
+                //Console.Write(Char9);
+                //Console.Write(Char10);
+                //Console.Write(Char11);
+                //Console.Write(Char12);
+                //Console.Write(Char13);
+                //Console.Write(Char14);
+                //Console.Write(Char15);
+                //Console.Write(Char16);
+                //Console.Write(Char17);
+                //Console.Write(Char18);
+                //Console.Write(Char19);
+                //Console.Write(Char20);
+                //Console.WriteLine("");
+
+                string GenPass = Char1 + "" + Char2 + "" + Char3 + "" + Char4 + "" + Char5 + "" + Char6 + "" + Char7 + "" + Char8 + "" + Char9 + "" + Char10 + "" +
+                                     Char11 + "" + Char12; //+ "" + Char13 + "" + Char14 + "" + Char15 + "" + Char16 + "" + Char17 + "" + Char18 + "" + Char19 + "" + Char20;
+
+                Console.WriteLine("");
+                Console.WriteLine("Generated Password: " + GenPass);
+                Console.Write("Would you like to Generate a ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("New Password");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("?");
+                Console.WriteLine("");
+
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Y");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("/");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("N");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Loop = Console.ReadLine();
+            }
+
+            else if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no" /* */||/* */ Y == "N" || Y == "n" || Y == "No" || Y == "no")
+
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("You will be taken back to the menu then");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+               // Console.ReadLine();
+                Questions();
+                //return;
+            }
+
+            while (!(Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes" || Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no"))
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("Input a valid answer.");
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.White;
+                Loop = Console.ReadLine();
+            }
+
+            while (Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes")
+            {
+                //string PasswordChoice = "abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890";
+                string PasswordChoice = "0987654321!$%^&()-_=+abcdefghijkmnlopqrstuvwxyz1234567890ABCDEFGHIKMNLOPQRSTUVWXYZ!$%^&()-_=+1234567890abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890!$%^&()-_=+";
+
+                Random numgen = new Random();
+
+                int num = numgen.Next(0, PasswordChoice.Length);
+                int num2 = numgen.Next(0, PasswordChoice.Length);
+                int num3 = numgen.Next(0, PasswordChoice.Length);
+                int num4 = numgen.Next(0, PasswordChoice.Length);
+                int num5 = numgen.Next(0, PasswordChoice.Length);
+                int num6 = numgen.Next(0, PasswordChoice.Length);
+                int num7 = numgen.Next(0, PasswordChoice.Length);
+                int num8 = numgen.Next(0, PasswordChoice.Length);
+                int num9 = numgen.Next(0, PasswordChoice.Length);
+                int num10 = numgen.Next(0, PasswordChoice.Length);
+                int num11 = numgen.Next(0, PasswordChoice.Length);
+                int num12 = numgen.Next(0, PasswordChoice.Length);
+                int num13 = numgen.Next(0, PasswordChoice.Length);
+                int num14 = numgen.Next(0, PasswordChoice.Length);
+                int num15 = numgen.Next(0, PasswordChoice.Length);
+                int num16 = numgen.Next(0, PasswordChoice.Length);
+                int num17 = numgen.Next(0, PasswordChoice.Length);
+                int num18 = numgen.Next(0, PasswordChoice.Length);
+                int num19 = numgen.Next(0, PasswordChoice.Length);
+                int num20 = numgen.Next(0, PasswordChoice.Length);
+
+                var Char1 = PasswordChoice[num];
+                var Char2 = PasswordChoice[num2];
+                var Char3 = PasswordChoice[num3];
+                var Char4 = PasswordChoice[num4];
+                var Char5 = PasswordChoice[num5];
+                var Char6 = PasswordChoice[num6];
+                var Char7 = PasswordChoice[num7];
+                var Char8 = PasswordChoice[num8];
+                var Char9 = PasswordChoice[num9];
+                var Char10 = PasswordChoice[num10];
+                var Char11 = PasswordChoice[num11];
+                var Char12 = PasswordChoice[num12];
+                var Char13 = PasswordChoice[num13];
+                var Char14 = PasswordChoice[num14];
+                var Char15 = PasswordChoice[num15];
+                var Char16 = PasswordChoice[num16];
+                var Char17 = PasswordChoice[num17];
+                var Char18 = PasswordChoice[num18];
+                var Char19 = PasswordChoice[num19];
+                var Char20 = PasswordChoice[num20];
+
+                string GenPass = Char1 + "" + Char2 + "" + Char3 + "" + Char4 + "" + Char5 + "" + Char6 + "" + Char7 + "" + Char8 + "" + Char9 + "" + Char10 + "" +
+                                 Char11 + "" + Char12 + "" + Char13 + "" + Char14 + "" + Char15 + "" + Char16 + "" + Char17 + "" + Char18 + "" + Char19 + "" + Char20;
+
+                Console.WriteLine("");
+                Console.WriteLine("Generated Password: " + GenPass);
+                Console.Write("Would you like to Generate a ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("New Password");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("?");
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Y");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("/");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("N");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Loop = Console.ReadLine();
+
+                while (!(Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes" || Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no"))
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Input a valid answer.");
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Loop = Console.ReadLine();
+
+                }
+
+                if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no")
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("You will be taken back to the menu.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadLine();
+                    Questions();
+                   // return;
+                }
+
+            }
+
+            if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no")
+            {
+
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadLine();
+                Questions();
+                //return;
+            }
+
+            Console.ReadKey();
+        }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static void CheckPassword()
+        {
+            {
+                /* We take in the users password, if they have special charcters like ((( "+ - () & ^ % $ £" ))) then we add like 1 or 2 points for each, we also add points for each capital
+                 letter or possibly just add poinjjts if a certain amount of CAPITAL Letters are used aswell as a certain amount of points for basic lower case letters. Also we could add
+                 about like 2 ish points for like each number used. We seal it all with string manipiulation and if statements by saying like: if 'UserPassword' then like char1(userpassword[1])
+                 or something like that idk i forgot but we then check all of those for what character they have, depending on each singular character we either add points or nothing.
+              */
+                /* im thinking we add like 2 or another amount of points for about every 5 Capitals letters, maybe the same for lower case to. */
+                // Space character is not allowed
+                // Entered password must be between 8 - 24 characters, if it isnt then a suitable error message must be displayed, or if the password contains unallowed characters or symbols
+
+                int Points = 0;
+
+                int LowerPoints = 0;
+                int CapitalPoints = 0;
+                int NumberPoints = 0;
+                int SpecialPoints = 0;
+
+                Console.WriteLine("");
+                Console.WriteLine("What is ur password?");
+                Console.WriteLine("");
+
+                string UserPassword = "                                                                                                             ";
+                UserPassword = Console.ReadLine();
+                UserPassword = UserPassword.ToString();
+
+                int lenght = UserPassword.Length;
+                lenght = lenght - 1;
+
+                while (lenght < 7)
+                {
+                    if (lenght < 7)
+                    {
+                        Console.WriteLine("Password needs to be Longer");
+                        Console.WriteLine("Minimum character count is 8");
+                        UserPassword = Console.ReadLine();
+                        UserPassword = UserPassword.ToString();
+                        lenght = UserPassword.Length;
+                        lenght = lenght - 1;
+                    }
+                }
+                while (lenght > 23)
+                {
+                    if (lenght > 23)
+                    {
+                        Console.WriteLine("Password needs to be Shorter");
+                        Console.WriteLine("Maximum character count is 24");
+                        UserPassword = Console.ReadLine();
+                        UserPassword = UserPassword.ToString();
+                        lenght = UserPassword.Length;
+                        lenght = lenght - 1;
+                    }
+                }
+
+
+
+                if (lenght == 7)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                }
+                if (lenght == 8)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+
+                }
+                if (lenght == 9)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+
+                }
+                if (lenght == 10)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+
+                }
+                if (lenght == 11)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+
+                }
+                if (lenght == 12)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+
+                }
+                if (lenght == 13)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+
+                }
+                if (lenght == 14)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+
+                }
+                if (lenght == 15)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+
+                }
+                if (lenght == 16)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+
+                }
+                if (lenght == 17)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+
+                }
+                if (lenght == 18)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+
+                }
+                if (lenght == 19)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+                    Char20 = UserPassword[19];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+                    P20 = UserPassword[19].ToString();
+
+                }
+                if (lenght == 20)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+                    Char20 = UserPassword[19];
+                    Char21 = UserPassword[20];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+                    P20 = UserPassword[19].ToString();
+                    P21 = UserPassword[20].ToString();
+
+                }
+                if (lenght == 21)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+                    Char20 = UserPassword[19];
+                    Char21 = UserPassword[20];
+                    Char22 = UserPassword[21];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+                    P20 = UserPassword[19].ToString();
+                    P21 = UserPassword[20].ToString();
+                    P22 = UserPassword[21].ToString();
+
+                }
+                if (lenght == 22)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+                    Char20 = UserPassword[19];
+                    Char21 = UserPassword[20];
+                    Char22 = UserPassword[21];
+                    Char23 = UserPassword[22];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+                    P20 = UserPassword[19].ToString();
+                    P21 = UserPassword[20].ToString();
+                    P22 = UserPassword[21].ToString();
+                    P23 = UserPassword[22].ToString();
+
+                }
+                if (lenght == 23)
+                {
+                    Char1 = UserPassword[0];
+                    Char2 = UserPassword[1];
+                    Char3 = UserPassword[2];
+                    Char4 = UserPassword[3];
+                    Char5 = UserPassword[4];
+                    Char6 = UserPassword[5];
+                    Char7 = UserPassword[6];
+                    Char8 = UserPassword[7];
+                    Char9 = UserPassword[8];
+                    Char10 = UserPassword[9];
+                    Char11 = UserPassword[10];
+                    Char12 = UserPassword[11];
+                    Char13 = UserPassword[12];
+                    Char14 = UserPassword[13];
+                    Char15 = UserPassword[14];
+                    Char16 = UserPassword[15];
+                    Char17 = UserPassword[16];
+                    Char18 = UserPassword[17];
+                    Char19 = UserPassword[18];
+                    Char20 = UserPassword[19];
+                    Char21 = UserPassword[20];
+                    Char22 = UserPassword[21];
+                    Char23 = UserPassword[22];
+                    Char24 = UserPassword[23];
+
+                    P1 = UserPassword[0].ToString();
+                    P2 = UserPassword[1].ToString();
+                    P3 = UserPassword[2].ToString();
+                    P4 = UserPassword[3].ToString();
+                    P5 = UserPassword[4].ToString();
+                    P6 = UserPassword[5].ToString();
+                    P7 = UserPassword[6].ToString();
+                    P8 = UserPassword[7].ToString();
+                    P9 = UserPassword[8].ToString();
+                    P10 = UserPassword[9].ToString();
+                    P11 = UserPassword[10].ToString();
+                    P12 = UserPassword[11].ToString();
+                    P13 = UserPassword[12].ToString();
+                    P14 = UserPassword[13].ToString();
+                    P15 = UserPassword[14].ToString();
+                    P16 = UserPassword[15].ToString();
+                    P17 = UserPassword[16].ToString();
+                    P18 = UserPassword[17].ToString();
+                    P19 = UserPassword[18].ToString();
+                    P20 = UserPassword[19].ToString();
+                    P21 = UserPassword[20].ToString();
+                    P22 = UserPassword[21].ToString();
+                    P23 = UserPassword[22].ToString();
+                    P24 = UserPassword[23].ToString();
+                }
+
+                //Make this into a subroutine?
+
+                //Console.WriteLine(UserPassword[0]);
+                //Console.WriteLine(UserPassword[1]);
+                //Console.WriteLine(UserPassword[2]);
+                //Console.WriteLine(UserPassword[3]);
+                //Console.WriteLine(UserPassword[4]);
+                //Console.WriteLine(UserPassword[5]);
+                //Console.WriteLine(UserPassword[6]);
+                //Console.WriteLine(UserPassword[7]);
+                //Console.WriteLine(UserPassword[8]);
+                //Console.WriteLine(UserPassword[9]);
+                //Console.WriteLine(UserPassword[10]);
+                //Console.WriteLine(UserPassword[11]);
+                //Console.WriteLine(UserPassword[12]);
+                //Console.WriteLine(UserPassword[13]);
+                //Console.WriteLine(UserPassword[14]);
+                //Console.WriteLine(UserPassword[15]);
+                //Console.WriteLine(UserPassword[16]);
+                //Console.WriteLine(UserPassword[17]);
+                //Console.WriteLine(UserPassword[18]);
+                //Console.WriteLine(UserPassword[19]);
+                //Console.WriteLine(UserPassword[20]);
+                //Console.WriteLine(UserPassword[21]);
+                //Console.WriteLine(UserPassword[22]);
+                //Console.WriteLine(UserPassword[23]);
+
+                //Console.WriteLine("The charcters are");
+                //Console.Write(Char1);
+                //Console.Write(Char2);
+                //Console.Write(Char3);
+                //Console.Write(Char4);
+                //Console.Write(Char5);
+                //Console.Write(Char6);
+                //Console.Write(Char7);
+                //Console.Write(Char8);
+                //Console.Write(Char9);
+                //Console.Write(Char10);
+                //Console.Write(Char11);
+                //Console.Write(Char12);
+                //Console.Write(Char13);
+                //Console.Write(Char14);
+                //Console.Write(Char15);
+                //Console.Write(Char16);
+                //Console.Write(Char17);
+                //Console.Write(Char18);
+                //Console.Write(Char19);
+                //Console.Write(Char20);
+                //Console.Write(Char21);
+                //Console.Write(Char22);
+                //Console.Write(Char23);
+                //Console.Write(Char24);
+
+                /*  if (char.IsLetter(Char1)||(char.IsLetter(Char2)))
+                  {
+                      Points = Points + 5;
+                  }  */
+
+                if (char.IsUpper(Char1) || char.IsUpper(Char2) || char.IsUpper(Char3) || char.IsUpper(Char4) || char.IsUpper(Char5) || char.IsUpper(Char6) || char.IsUpper(Char7)
+                    || char.IsUpper(Char8) || char.IsUpper(Char9) || char.IsUpper(Char10) || char.IsUpper(Char11) || char.IsUpper(Char12) || char.IsUpper(Char13)
+                    || char.IsUpper(Char14) || char.IsUpper(Char15) || char.IsUpper(Char16) || char.IsUpper(Char17) || char.IsUpper(Char18) || char.IsUpper(Char19)
+                    || char.IsUpper(Char20) || char.IsUpper(Char21) || char.IsUpper(Char22) || char.IsUpper(Char23) || char.IsUpper(Char24))
+                {
+                    Points = Points + 5;
+                }
+
+                if (char.IsLower(Char1) || char.IsLower(Char2) || char.IsLower(Char3) || char.IsLower(Char4) || char.IsLower(Char5) || char.IsLower(Char6) || char.IsLower(Char7)
+                   || char.IsLower(Char8) || char.IsLower(Char9) || char.IsLower(Char10) || char.IsLower(Char11) || char.IsLower(Char12) || char.IsLower(Char13)
+                   || char.IsLower(Char14) || char.IsLower(Char15) || char.IsLower(Char16) || char.IsLower(Char17) || char.IsLower(Char18) || char.IsLower(Char19)
+                   || char.IsLower(Char20) || char.IsLower(Char21) || char.IsLower(Char22) || char.IsLower(Char23) || char.IsLower(Char24))
+                {
+                    Points = Points + 5;
+                }
+
+                if (char.IsNumber(Char1) || char.IsNumber(Char2) || char.IsNumber(Char3) || char.IsNumber(Char4) || char.IsNumber(Char5) || char.IsNumber(Char6) || char.IsNumber(Char7)
+                  || char.IsNumber(Char8) || char.IsNumber(Char9) || char.IsNumber(Char10) || char.IsNumber(Char11) || char.IsNumber(Char12) || char.IsNumber(Char13)
+                  || char.IsNumber(Char14) || char.IsNumber(Char15) || char.IsNumber(Char16) || char.IsNumber(Char17) || char.IsNumber(Char18) || char.IsNumber(Char19)
+                  || char.IsNumber(Char20) || char.IsNumber(Char21) || char.IsNumber(Char22) || char.IsNumber(Char23) || char.IsNumber(Char24))
+
+                    //string P1 = UserPassword[1].ToString();
+                    //string P2 = UserPassword[2].ToString();
+                    //string P3 = UserPassword[3].ToString();
+                    //string P4 = UserPassword[4].ToString();
+                    //string P5 = UserPassword[5].ToString();
+                    //string P6 = UserPassword[6].ToString();
+                    //string P7 = UserPassword[7].ToString();
+                    //string P8 = UserPassword[8].ToString();
+                    //string P9 = UserPassword[9].ToString();
+                    //string P10 = UserPassword[10].ToString();
+                    //string P11 = UserPassword[11].ToString();
+                    //string P12 = UserPassword[12].ToString();
+                    //string P13 = UserPassword[13].ToString();
+                    //string P14 = UserPassword[14].ToString();
+                    //string P15 = UserPassword[15].ToString();
+                    //string P16 = UserPassword[16].ToString();
+                    //string P17 = UserPassword[17].ToString();
+                    //string P18 = UserPassword[18].ToString();
+                    //string P19 = UserPassword[19].ToString();
+                    //string P20 = UserPassword[20].ToString();
+                    //string P21 = UserPassword[21].ToString();
+                    //string P22 = UserPassword[22].ToString();
+                    //string P23 = UserPassword[23].ToString();
+                    //string P24 = UserPassword[24].ToString();
+
+
+
+                    //if (P1.Contains("1 2 3 4 5 6 7 8 9 0") || P2.Contains("1 2 3 4 5 6 7 8 9 0") || P3.Contains("1 2 3 4 5 6 7 8 9 0") || P4.Contains("1 2 3 4 5 6 7 8 9 0") || P5.Contains("1 2 3 4 5 6 7 8 9 0")
+                    //       || P6.Contains("1 2 3 4 5 6 7 8 9 0") || P7.Contains("1 2 3 4 5 6 7 8 9 0") || P8.Contains("1 2 3 4 5 6 7 8 9 0") || P9.Contains("1 2 3 4 5 6 7 8 9 0") || P10.Contains("1 2 3 4 5 6 7 8 9 0")
+                    //       || P11.Contains("1 2 3 4 5 6 7 8 9 0") || P12.Contains("1 2 3 4 5 6 7 8 9 0") || P13.Contains("1 2 3 4 5 6 7 8 9 0") || P14.Contains("1 2 3 4 5 6 7 8 9 0") || P15.Contains("1 2 3 4 5 6 7 8 9 0")
+                    //       || P16.Contains("1 2 3 4 5 6 7 8 9 0") || P17.Contains("1 2 3 4 5 6 7 8 9 0") || P18.Contains("1 2 3 4 5 6 7 8 9 0") || P19.Contains("1 2 3 4 5 6 7 8 9 0") || P20.Contains("1 2 3 4 5 6 7 8 9 0")
+                    //       || P21.Contains("1 2 3 4 5 6 7 8 9 0") || P22.Contains("1 2 3 4 5 6 7 8 9 0") || P23.Contains("1 2 3 4 5 6 7 8 9 0") || P24.Contains("1 2 3 4 5 6 7 8 9 0"))
+                    //{
+                    //    Points = Points + 5;
+                    //}
+
+
+
+                    //if (P1 == "1" || P1 == "2" || P1 == "3" || P1 == "4" || P1 == "5" || P1 == "6" || P1 == "7" || P1 == "8" || P1 == "9" || P1 == "0" ||
+                    //    P2 == "1" || P2 == "2" || P2 == "3" || P2 == "4" || P2 == "5" || P2 == "6" || P2 == "7" || P2 == "8" || P2 == "9" || P2 == "0" ||
+                    //    P3 == "1" || P3 == "2" || P3 == "3" || P3 == "4" || P3 == "5" || P3 == "6" || P3 == "7" || P3 == "8" || P3 == "9" || P3 == "0" ||
+                    //    P4 == "1" || P4 == "2" || P4 == "3" || P4 == "4" || P4 == "5" || P4 == "6" || P4 == "7" || P4 == "8" || P4 == "9" || P4 == "0" ||
+                    //    P5 == "1" || P5 == "2" || P5 == "3" || P5 == "4" || P5 == "5" || P5 == "6" || P5 == "7" || P5 == "8" || P5 == "9" || P5 == "0" ||
+                    //    P6 == "1" || P6 == "2" || P6 == "3" || P6 == "4" || P6 == "5" || P6 == "6" || P6 == "7" || P6 == "8" || P6 == "9" || P6 == "0" ||
+                    //    P7 == "1" || P7 == "2" || P7 == "3" || P7 == "4" || P7 == "5" || P7 == "6" || P7 == "7" || P7 == "8" || P7 == "9" || P7 == "0" ||
+                    //    P8 == "1" || P8 == "2" || P8 == "3" || P8 == "4" || P8 == "5" || P8 == "6" || P8 == "7" || P8 == "8" || P8 == "9" || P8 == "0" ||
+                    //    P9 == "1" || P9 == "2" || P9 == "3" || P9 == "4" || P9 == "5" || P9 == "6" || P9 == "7" || P9 == "8" || P9 == "9" || P9 == "0" ||
+                    //    P10 == "1" || P10 == "2" || P10 == "3" || P10 == "4" || P10 == "5" || P10 == "6" || P10 == "7" || P10 == "8" || P10 == "9" || P10 == "0" ||
+                    //    P11 == "1" || P11 == "2" || P11 == "3" || P11 == "4" || P11 == "5" || P11 == "6" || P11 == "7" || P11 == "8" || P11 == "9" || P11 == "0" ||
+                    //    P12 == "1" || P12 == "2" || P12 == "3" || P12 == "4" || P12 == "5" || P12 == "6" || P12 == "7" || P12 == "8" || P12 == "9" || P12 == "0" ||
+                    //    P13 == "1" || P13 == "2" || P13 == "3" || P13 == "4" || P13 == "5" || P13 == "6" || P13 == "7" || P13 == "8" || P13 == "9" || P13 == "0" ||
+                    //    P14 == "1" || P14 == "2" || P14 == "3" || P14 == "4" || P14 == "5" || P14 == "6" || P14 == "7" || P14 == "8" || P14 == "9" || P14 == "0" ||
+                    //    P15 == "1" || P15 == "2" || P15 == "3" || P15 == "4" || P15 == "5" || P15 == "6" || P15 == "7" || P15 == "8" || P15 == "9" || P15 == "0" ||
+                    //    P16 == "1" || P16 == "2" || P16 == "3" || P16 == "4" || P16 == "5" || P16 == "6" || P16 == "7" || P16 == "8" || P16 == "9" || P16 == "0" ||
+                    //    P17 == "1" || P17 == "2" || P17 == "3" || P17 == "4" || P17 == "5" || P17 == "6" || P17 == "7" || P17 == "8" || P17 == "9" || P17 == "0" ||
+                    //    P18 == "1" || P18 == "2" || P18 == "3" || P18 == "4" || P18 == "5" || P18 == "6" || P18 == "7" || P18 == "8" || P18 == "9" || P18 == "0" ||
+                    //    P19 == "1" || P19 == "2" || P19 == "3" || P19 == "4" || P19 == "5" || P19 == "6" || P19 == "7" || P19 == "8" || P19 == "9" || P19 == "0" ||
+                    //    P20 == "1" || P20 == "2" || P20 == "3" || P20 == "4" || P20 == "5" || P20 == "6" || P20 == "7" || P20 == "8" || P20 == "9" || P20 == "0" ||
+                    //    P21 == "1" || P21 == "2" || P21 == "3" || P21 == "4" || P21 == "5" || P21 == "6" || P21 == "7" || P21 == "8" || P21 == "9" || P21 == "0" ||
+                    //    P22 == "1" || P22 == "2" || P22 == "3" || P22 == "4" || P22 == "5" || P22 == "6" || P22 == "7" || P22 == "8" || P22 == "9" || P22 == "0" ||
+                    //    P23 == "1" || P23 == "2" || P23 == "3" || P23 == "4" || P23 == "5" || P23 == "6" || P23 == "7" || P23 == "8" || P23 == "9" || P23 == "0" ||
+                    //    P24 == "1" || P24 == "2" || P24 == "3" || P24 == "4" || P24 == "5" || P24 == "6" || P24 == "7" || P24 == "8" || P24 == "9" || P24 == "0")
+                    //{
+                    //    Points = Points + 5;
+                    //}
+
+                    if (Char1.ToString() == "+" || Char1.ToString() == "-" || Char1.ToString() == "(" || Char1.ToString() == ")" || Char1.ToString() == "&" || Char1.ToString() == "^" ||
+                        Char1.ToString() == "%" || Char1.ToString() == "$" || Char1.ToString() == "£" /**/||/**/ Char2.ToString() == "+" || Char2.ToString() == "-" || Char2.ToString() == "(" ||
+                        Char2.ToString() == ")" || Char2.ToString() == "&" || Char2.ToString() == "^" || Char2.ToString() == "%" || Char2.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+                        Char3.ToString() == "+" || Char3.ToString() == "-" || Char3.ToString() == "(" || Char3.ToString() == ")" || Char3.ToString() == "&" || Char3.ToString() == "^" ||
+                        Char3.ToString() == "%" || Char3.ToString() == "$" || Char3.ToString() == "£" /**/||/**/ Char4.ToString() == "+" || Char4.ToString() == "-" || Char4.ToString() == "(" ||
+                        Char4.ToString() == ")" || Char4.ToString() == "&" || Char4.ToString() == "^" || Char4.ToString() == "%" || Char4.ToString() == "$" || Char4.ToString() == "£"/**/||/**/
+                        Char5.ToString() == "+" || Char5.ToString() == "-" || Char5.ToString() == "(" || Char5.ToString() == ")" || Char5.ToString() == "&" || Char5.ToString() == "^" ||
+                        Char5.ToString() == "%" || Char5.ToString() == "$" || Char5.ToString() == "£" /**/||/**/ Char6.ToString() == "+" || Char6.ToString() == "-" || Char6.ToString() == "(" ||
+                        Char6.ToString() == ")" || Char6.ToString() == "&" || Char6.ToString() == "^" || Char6.ToString() == "%" || Char6.ToString() == "$" || Char6.ToString() == "£"/**/||/**/
+                        Char7.ToString() == "+" || Char7.ToString() == "-" || Char7.ToString() == "(" || Char7.ToString() == ")" || Char7.ToString() == "&" || Char7.ToString() == "^" ||
+                        Char7.ToString() == "%" || Char7.ToString() == "$" || Char7.ToString() == "£" /**/||/**/ Char8.ToString() == "+" || Char8.ToString() == "-" || Char8.ToString() == "(" ||
+                        Char8.ToString() == ")" || Char8.ToString() == "&" || Char8.ToString() == "^" || Char8.ToString() == "%" || Char8.ToString() == "$" || Char8.ToString() == "£"/**/||/**/
+                        Char9.ToString() == "+" || Char9.ToString() == "-" || Char9.ToString() == "(" || Char9.ToString() == ")" || Char9.ToString() == "&" || Char9.ToString() == "^" ||
+                        Char9.ToString() == "%" || Char9.ToString() == "$" || Char9.ToString() == "£"/**/||/**/Char10.ToString() == "+" || Char10.ToString() == "-" || Char10.ToString() == "(" ||
+                        Char10.ToString() == ")" || Char10.ToString() == "&" || Char10.ToString() == "^" || Char10.ToString() == "%" || Char10.ToString() == "$" || Char10.ToString() == "£"/**/||/**/
+                        Char11.ToString() == "+" || Char11.ToString() == "-" || Char11.ToString() == "(" || Char11.ToString() == ")" || Char11.ToString() == "&" || Char11.ToString() == "^" ||
+                        Char11.ToString() == "%" || Char11.ToString() == "$" || Char11.ToString() == "£" /**/||/**/Char12.ToString() == "+" || Char12.ToString() == "-" || Char12.ToString() == "(" ||
+                        Char12.ToString() == ")" || Char12.ToString() == "&" || Char12.ToString() == "^" || Char12.ToString() == "%" || Char12.ToString() == "$" || Char12.ToString() == "£" ||
+                        Char13.ToString() == "+" || Char13.ToString() == "-" || Char13.ToString() == "(" || Char13.ToString() == ")" || Char13.ToString() == "&" || Char13.ToString() == "^" ||
+                        Char13.ToString() == "%" || Char13.ToString() == "$" || Char13.ToString() == "£" /**/||/**/ Char14.ToString() == "+" || Char14.ToString() == "-" || Char14.ToString() == "(" ||
+                        Char14.ToString() == ")" || Char14.ToString() == "&" || Char14.ToString() == "^" || Char14.ToString() == "%" || Char14.ToString() == "$" || Char14.ToString() == "£"/**/||/**/
+                        Char15.ToString() == "+" || Char15.ToString() == "-" || Char15.ToString() == "(" || Char15.ToString() == ")" || Char15.ToString() == "&" || Char15.ToString() == "^" ||
+                        Char15.ToString() == "%" || Char15.ToString() == "$" || Char15.ToString() == "£" /**/||/**/ Char16.ToString() == "+" || Char16.ToString() == "-" || Char16.ToString() == "(" ||
+                        Char16.ToString() == ")" || Char16.ToString() == "&" || Char16.ToString() == "^" || Char16.ToString() == "%" || Char16.ToString() == "$" || Char16.ToString() == "£"/**/||/**/
+                        Char17.ToString() == "+" || Char17.ToString() == "-" || Char17.ToString() == "(" || Char17.ToString() == ")" || Char17.ToString() == "&" || Char17.ToString() == "^" ||
+                        Char17.ToString() == "%" || Char17.ToString() == "$" || Char17.ToString() == "£" /**/||/**/ Char18.ToString() == "+" || Char18.ToString() == "-" || Char18.ToString() == "(" ||
+                        Char18.ToString() == ")" || Char18.ToString() == "&" || Char18.ToString() == "^" || Char18.ToString() == "%" || Char18.ToString() == "$" || Char18.ToString() == "£"/**/||/**/
+                        Char19.ToString() == "+" || Char19.ToString() == "-" || Char19.ToString() == "(" || Char19.ToString() == ")" || Char19.ToString() == "&" || Char19.ToString() == "^" ||
+                        Char19.ToString() == "%" || Char19.ToString() == "$" || Char19.ToString() == "£" /**/||/**/ Char20.ToString() == "+" || Char20.ToString() == "-" || Char20.ToString() == "(" ||
+                        Char20.ToString() == ")" || Char20.ToString() == "&" || Char20.ToString() == "^" || Char20.ToString() == "%" || Char20.ToString() == "$" || Char20.ToString() == "£"/**/||/**/
+                        Char21.ToString() == "+" || Char21.ToString() == "-" || Char21.ToString() == "(" || Char21.ToString() == ")" || Char21.ToString() == "&" || Char21.ToString() == "^" ||
+                        Char21.ToString() == "%" || Char21.ToString() == "$" || Char21.ToString() == "£"/**/||/**/Char22.ToString() == "+" || Char22.ToString() == "-" || Char22.ToString() == "(" ||
+                        Char22.ToString() == ")" || Char22.ToString() == "&" || Char22.ToString() == "^" || Char22.ToString() == "%" || Char22.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+                        Char23.ToString() == "+" || Char23.ToString() == "-" || Char23.ToString() == "(" || Char23.ToString() == ")" || Char23.ToString() == "&" || Char23.ToString() == "^" ||
+                        Char23.ToString() == "%" || Char23.ToString() == "$" || Char23.ToString() == "£" /**/||/**/Char24.ToString() == "+" || Char24.ToString() == "-" || Char24.ToString() == "(" ||
+                        Char24.ToString() == ")" || Char24.ToString() == "&" || Char24.ToString() == "^" || Char24.ToString() == "%" || Char24.ToString() == "$" || Char24.ToString() == "£")
+                    {
+                        Points = Points + 5;
+                    }
+
+
+                if ((char.IsUpper(Char1) || char.IsUpper(Char2) || char.IsUpper(Char3) || char.IsUpper(Char4) || char.IsUpper(Char5) || char.IsUpper(Char6) || char.IsUpper(Char7)
+                    || char.IsUpper(Char8) || char.IsUpper(Char9) || char.IsUpper(Char10) || char.IsUpper(Char11) || char.IsUpper(Char12) || char.IsUpper(Char13)
+                    || char.IsUpper(Char14) || char.IsUpper(Char15) || char.IsUpper(Char16) || char.IsUpper(Char17) || char.IsUpper(Char18) || char.IsUpper(Char19)
+                    || char.IsUpper(Char20) || char.IsUpper(Char21) || char.IsUpper(Char22) || char.IsUpper(Char23) || char.IsUpper(Char24) ||
+
+                    char.IsNumber(Char1) || char.IsNumber(Char2) || char.IsNumber(Char3) || char.IsNumber(Char4) || char.IsNumber(Char5) || char.IsNumber(Char6) || char.IsNumber(Char7)
+                  || char.IsNumber(Char8) || char.IsNumber(Char9) || char.IsNumber(Char10) || char.IsNumber(Char11) || char.IsNumber(Char12) || char.IsNumber(Char13)
+                  || char.IsNumber(Char14) || char.IsNumber(Char15) || char.IsNumber(Char16) || char.IsNumber(Char17) || char.IsNumber(Char18) || char.IsNumber(Char19)
+                  || char.IsNumber(Char20) || char.IsNumber(Char21) || char.IsNumber(Char22) || char.IsNumber(Char23) || char.IsNumber(Char24) ||
+
+                  char.IsLower(Char1) || char.IsLower(Char2) || char.IsLower(Char3) || char.IsLower(Char4) || char.IsLower(Char5) || char.IsLower(Char6) || char.IsLower(Char7)
+                  || char.IsLower(Char8) || char.IsLower(Char9) || char.IsLower(Char10) || char.IsLower(Char11) || char.IsLower(Char12) || char.IsLower(Char13)
+                  || char.IsLower(Char14) || char.IsLower(Char15) || char.IsLower(Char16) || char.IsLower(Char17) || char.IsLower(Char18) || char.IsLower(Char19)
+                  || char.IsLower(Char20) || char.IsLower(Char21) || char.IsLower(Char22) || char.IsLower(Char23) || char.IsLower(Char24) ||
+
+                  Char1.ToString() == "+" || Char1.ToString() == "-" || Char1.ToString() == "(" || Char1.ToString() == ")" || Char1.ToString() == "&" || Char1.ToString() == "^" ||
+               Char1.ToString() == "%" || Char1.ToString() == "$" || Char1.ToString() == "£" /**/||/**/ Char2.ToString() == "+" || Char2.ToString() == "-" || Char2.ToString() == "(" ||
+               Char2.ToString() == ")" || Char2.ToString() == "&" || Char2.ToString() == "^" || Char2.ToString() == "%" || Char2.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+               Char3.ToString() == "+" || Char3.ToString() == "-" || Char3.ToString() == "(" || Char3.ToString() == ")" || Char3.ToString() == "&" || Char3.ToString() == "^" ||
+               Char3.ToString() == "%" || Char3.ToString() == "$" || Char3.ToString() == "£" /**/||/**/ Char4.ToString() == "+" || Char4.ToString() == "-" || Char4.ToString() == "(" ||
+               Char4.ToString() == ")" || Char4.ToString() == "&" || Char4.ToString() == "^" || Char4.ToString() == "%" || Char4.ToString() == "$" || Char4.ToString() == "£"/**/||/**/
+               Char5.ToString() == "+" || Char5.ToString() == "-" || Char5.ToString() == "(" || Char5.ToString() == ")" || Char5.ToString() == "&" || Char5.ToString() == "^" ||
+               Char5.ToString() == "%" || Char5.ToString() == "$" || Char5.ToString() == "£" /**/||/**/ Char6.ToString() == "+" || Char6.ToString() == "-" || Char6.ToString() == "(" ||
+               Char6.ToString() == ")" || Char6.ToString() == "&" || Char6.ToString() == "^" || Char6.ToString() == "%" || Char6.ToString() == "$" || Char6.ToString() == "£"/**/||/**/
+               Char7.ToString() == "+" || Char7.ToString() == "-" || Char7.ToString() == "(" || Char7.ToString() == ")" || Char7.ToString() == "&" || Char7.ToString() == "^" ||
+               Char7.ToString() == "%" || Char7.ToString() == "$" || Char7.ToString() == "£" /**/||/**/ Char8.ToString() == "+" || Char8.ToString() == "-" || Char8.ToString() == "(" ||
+               Char8.ToString() == ")" || Char8.ToString() == "&" || Char8.ToString() == "^" || Char8.ToString() == "%" || Char8.ToString() == "$" || Char8.ToString() == "£"/**/||/**/
+               Char9.ToString() == "+" || Char9.ToString() == "-" || Char9.ToString() == "(" || Char9.ToString() == ")" || Char9.ToString() == "&" || Char9.ToString() == "^" ||
+               Char9.ToString() == "%" || Char9.ToString() == "$" || Char9.ToString() == "£"/**/||/**/Char10.ToString() == "+" || Char10.ToString() == "-" || Char10.ToString() == "(" ||
+               Char10.ToString() == ")" || Char10.ToString() == "&" || Char10.ToString() == "^" || Char10.ToString() == "%" || Char10.ToString() == "$" || Char10.ToString() == "£"/**/||/**/
+               Char11.ToString() == "+" || Char11.ToString() == "-" || Char11.ToString() == "(" || Char11.ToString() == ")" || Char11.ToString() == "&" || Char11.ToString() == "^" ||
+               Char11.ToString() == "%" || Char11.ToString() == "$" || Char11.ToString() == "£" /**/||/**/Char12.ToString() == "+" || Char12.ToString() == "-" || Char12.ToString() == "(" ||
+               Char12.ToString() == ")" || Char12.ToString() == "&" || Char12.ToString() == "^" || Char12.ToString() == "%" || Char12.ToString() == "$" || Char12.ToString() == "£" ||
+               Char13.ToString() == "+" || Char13.ToString() == "-" || Char13.ToString() == "(" || Char13.ToString() == ")" || Char13.ToString() == "&" || Char13.ToString() == "^" ||
+               Char13.ToString() == "%" || Char13.ToString() == "$" || Char13.ToString() == "£" /**/||/**/ Char14.ToString() == "+" || Char14.ToString() == "-" || Char14.ToString() == "(" ||
+               Char14.ToString() == ")" || Char14.ToString() == "&" || Char14.ToString() == "^" || Char14.ToString() == "%" || Char14.ToString() == "$" || Char14.ToString() == "£"/**/||/**/
+               Char15.ToString() == "+" || Char15.ToString() == "-" || Char15.ToString() == "(" || Char15.ToString() == ")" || Char15.ToString() == "&" || Char15.ToString() == "^" ||
+               Char15.ToString() == "%" || Char15.ToString() == "$" || Char15.ToString() == "£" /**/||/**/ Char16.ToString() == "+" || Char16.ToString() == "-" || Char16.ToString() == "(" ||
+               Char16.ToString() == ")" || Char16.ToString() == "&" || Char16.ToString() == "^" || Char16.ToString() == "%" || Char16.ToString() == "$" || Char16.ToString() == "£"/**/||/**/
+               Char17.ToString() == "+" || Char17.ToString() == "-" || Char17.ToString() == "(" || Char17.ToString() == ")" || Char17.ToString() == "&" || Char17.ToString() == "^" ||
+               Char17.ToString() == "%" || Char17.ToString() == "$" || Char17.ToString() == "£" /**/||/**/ Char18.ToString() == "+" || Char18.ToString() == "-" || Char18.ToString() == "(" ||
+               Char18.ToString() == ")" || Char18.ToString() == "&" || Char18.ToString() == "^" || Char18.ToString() == "%" || Char18.ToString() == "$" || Char18.ToString() == "£"/**/||/**/
+               Char19.ToString() == "+" || Char19.ToString() == "-" || Char19.ToString() == "(" || Char19.ToString() == ")" || Char19.ToString() == "&" || Char19.ToString() == "^" ||
+               Char19.ToString() == "%" || Char19.ToString() == "$" || Char19.ToString() == "£" /**/||/**/ Char20.ToString() == "+" || Char20.ToString() == "-" || Char20.ToString() == "(" ||
+               Char20.ToString() == ")" || Char20.ToString() == "&" || Char20.ToString() == "^" || Char20.ToString() == "%" || Char20.ToString() == "$" || Char20.ToString() == "£"/**/||/**/
+               Char21.ToString() == "+" || Char21.ToString() == "-" || Char21.ToString() == "(" || Char21.ToString() == ")" || Char21.ToString() == "&" || Char21.ToString() == "^" ||
+               Char21.ToString() == "%" || Char21.ToString() == "$" || Char21.ToString() == "£"/**/||/**/Char22.ToString() == "+" || Char22.ToString() == "-" || Char22.ToString() == "(" ||
+               Char22.ToString() == ")" || Char22.ToString() == "&" || Char22.ToString() == "^" || Char22.ToString() == "%" || Char22.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+               Char23.ToString() == "+" || Char23.ToString() == "-" || Char23.ToString() == "(" || Char23.ToString() == ")" || Char23.ToString() == "&" || Char23.ToString() == "^" ||
+               Char23.ToString() == "%" || Char23.ToString() == "$" || Char23.ToString() == "£" /**/||/**/Char24.ToString() == "+" || Char24.ToString() == "-" || Char24.ToString() == "(" ||
+               Char24.ToString() == ")" || Char24.ToString() == "&" || Char24.ToString() == "^" || Char24.ToString() == "%" || Char24.ToString() == "$" || Char24.ToString() == "£"))
+                {
+                    Points = Points + 10;
+                }
+
+
+                if (!(char.IsNumber(Char1) || char.IsNumber(Char2) || char.IsNumber(Char3) || char.IsNumber(Char4) || char.IsNumber(Char5) || char.IsNumber(Char6) || char.IsNumber(Char7)
+                  || char.IsNumber(Char8) || char.IsNumber(Char9) || char.IsNumber(Char10) || char.IsNumber(Char11) || char.IsNumber(Char12) || char.IsNumber(Char13)
+                  || char.IsNumber(Char14) || char.IsNumber(Char15) || char.IsNumber(Char16) || char.IsNumber(Char17) || char.IsNumber(Char18) || char.IsNumber(Char19)
+                  || char.IsNumber(Char20) || char.IsNumber(Char21) || char.IsNumber(Char22) || char.IsNumber(Char23) || char.IsNumber(Char24) ||
+
+                   Char1.ToString() == "+" || Char1.ToString() == "-" || Char1.ToString() == "(" || Char1.ToString() == ")" || Char1.ToString() == "&" || Char1.ToString() == "^" ||
+               Char1.ToString() == "%" || Char1.ToString() == "$" || Char1.ToString() == "£" /**/||/**/ Char2.ToString() == "+" || Char2.ToString() == "-" || Char2.ToString() == "(" ||
+               Char2.ToString() == ")" || Char2.ToString() == "&" || Char2.ToString() == "^" || Char2.ToString() == "%" || Char2.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+               Char3.ToString() == "+" || Char3.ToString() == "-" || Char3.ToString() == "(" || Char3.ToString() == ")" || Char3.ToString() == "&" || Char3.ToString() == "^" ||
+               Char3.ToString() == "%" || Char3.ToString() == "$" || Char3.ToString() == "£" /**/||/**/ Char4.ToString() == "+" || Char4.ToString() == "-" || Char4.ToString() == "(" ||
+               Char4.ToString() == ")" || Char4.ToString() == "&" || Char4.ToString() == "^" || Char4.ToString() == "%" || Char4.ToString() == "$" || Char4.ToString() == "£"/**/||/**/
+               Char5.ToString() == "+" || Char5.ToString() == "-" || Char5.ToString() == "(" || Char5.ToString() == ")" || Char5.ToString() == "&" || Char5.ToString() == "^" ||
+               Char5.ToString() == "%" || Char5.ToString() == "$" || Char5.ToString() == "£" /**/||/**/ Char6.ToString() == "+" || Char6.ToString() == "-" || Char6.ToString() == "(" ||
+               Char6.ToString() == ")" || Char6.ToString() == "&" || Char6.ToString() == "^" || Char6.ToString() == "%" || Char6.ToString() == "$" || Char6.ToString() == "£"/**/||/**/
+               Char7.ToString() == "+" || Char7.ToString() == "-" || Char7.ToString() == "(" || Char7.ToString() == ")" || Char7.ToString() == "&" || Char7.ToString() == "^" ||
+               Char7.ToString() == "%" || Char7.ToString() == "$" || Char7.ToString() == "£" /**/||/**/ Char8.ToString() == "+" || Char8.ToString() == "-" || Char8.ToString() == "(" ||
+               Char8.ToString() == ")" || Char8.ToString() == "&" || Char8.ToString() == "^" || Char8.ToString() == "%" || Char8.ToString() == "$" || Char8.ToString() == "£"/**/||/**/
+               Char9.ToString() == "+" || Char9.ToString() == "-" || Char9.ToString() == "(" || Char9.ToString() == ")" || Char9.ToString() == "&" || Char9.ToString() == "^" ||
+               Char9.ToString() == "%" || Char9.ToString() == "$" || Char9.ToString() == "£"/**/||/**/Char10.ToString() == "+" || Char10.ToString() == "-" || Char10.ToString() == "(" ||
+               Char10.ToString() == ")" || Char10.ToString() == "&" || Char10.ToString() == "^" || Char10.ToString() == "%" || Char10.ToString() == "$" || Char10.ToString() == "£"/**/||/**/
+               Char11.ToString() == "+" || Char11.ToString() == "-" || Char11.ToString() == "(" || Char11.ToString() == ")" || Char11.ToString() == "&" || Char11.ToString() == "^" ||
+               Char11.ToString() == "%" || Char11.ToString() == "$" || Char11.ToString() == "£" /**/||/**/Char12.ToString() == "+" || Char12.ToString() == "-" || Char12.ToString() == "(" ||
+               Char12.ToString() == ")" || Char12.ToString() == "&" || Char12.ToString() == "^" || Char12.ToString() == "%" || Char12.ToString() == "$" || Char12.ToString() == "£" ||
+               Char13.ToString() == "+" || Char13.ToString() == "-" || Char13.ToString() == "(" || Char13.ToString() == ")" || Char13.ToString() == "&" || Char13.ToString() == "^" ||
+               Char13.ToString() == "%" || Char13.ToString() == "$" || Char13.ToString() == "£" /**/||/**/ Char14.ToString() == "+" || Char14.ToString() == "-" || Char14.ToString() == "(" ||
+               Char14.ToString() == ")" || Char14.ToString() == "&" || Char14.ToString() == "^" || Char14.ToString() == "%" || Char14.ToString() == "$" || Char14.ToString() == "£"/**/||/**/
+               Char15.ToString() == "+" || Char15.ToString() == "-" || Char15.ToString() == "(" || Char15.ToString() == ")" || Char15.ToString() == "&" || Char15.ToString() == "^" ||
+               Char15.ToString() == "%" || Char15.ToString() == "$" || Char15.ToString() == "£" /**/||/**/ Char16.ToString() == "+" || Char16.ToString() == "-" || Char16.ToString() == "(" ||
+               Char16.ToString() == ")" || Char16.ToString() == "&" || Char16.ToString() == "^" || Char16.ToString() == "%" || Char16.ToString() == "$" || Char16.ToString() == "£"/**/||/**/
+               Char17.ToString() == "+" || Char17.ToString() == "-" || Char17.ToString() == "(" || Char17.ToString() == ")" || Char17.ToString() == "&" || Char17.ToString() == "^" ||
+               Char17.ToString() == "%" || Char17.ToString() == "$" || Char17.ToString() == "£" /**/||/**/ Char18.ToString() == "+" || Char18.ToString() == "-" || Char18.ToString() == "(" ||
+               Char18.ToString() == ")" || Char18.ToString() == "&" || Char18.ToString() == "^" || Char18.ToString() == "%" || Char18.ToString() == "$" || Char18.ToString() == "£"/**/||/**/
+               Char19.ToString() == "+" || Char19.ToString() == "-" || Char19.ToString() == "(" || Char19.ToString() == ")" || Char19.ToString() == "&" || Char19.ToString() == "^" ||
+               Char19.ToString() == "%" || Char19.ToString() == "$" || Char19.ToString() == "£" /**/||/**/ Char20.ToString() == "+" || Char20.ToString() == "-" || Char20.ToString() == "(" ||
+               Char20.ToString() == ")" || Char20.ToString() == "&" || Char20.ToString() == "^" || Char20.ToString() == "%" || Char20.ToString() == "$" || Char20.ToString() == "£"/**/||/**/
+               Char21.ToString() == "+" || Char21.ToString() == "-" || Char21.ToString() == "(" || Char21.ToString() == ")" || Char21.ToString() == "&" || Char21.ToString() == "^" ||
+               Char21.ToString() == "%" || Char21.ToString() == "$" || Char21.ToString() == "£"/**/||/**/Char22.ToString() == "+" || Char22.ToString() == "-" || Char22.ToString() == "(" ||
+               Char22.ToString() == ")" || Char22.ToString() == "&" || Char22.ToString() == "^" || Char22.ToString() == "%" || Char22.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+               Char23.ToString() == "+" || Char23.ToString() == "-" || Char23.ToString() == "(" || Char23.ToString() == ")" || Char23.ToString() == "&" || Char23.ToString() == "^" ||
+               Char23.ToString() == "%" || Char23.ToString() == "$" || Char23.ToString() == "£" /**/||/**/Char24.ToString() == "+" || Char24.ToString() == "-" || Char24.ToString() == "(" ||
+               Char24.ToString() == ")" || Char24.ToString() == "&" || Char24.ToString() == "^" || Char24.ToString() == "%" || Char24.ToString() == "$" || Char24.ToString() == "£"))
+                {
+                    Points = Points - 5;
+                }
+
+
+                if (!(char.IsUpper(Char1) || char.IsUpper(Char2) || char.IsUpper(Char3) || char.IsUpper(Char4) || char.IsUpper(Char5) || char.IsUpper(Char6) || char.IsUpper(Char7)
+                   || char.IsUpper(Char8) || char.IsUpper(Char9) || char.IsUpper(Char10) || char.IsUpper(Char11) || char.IsUpper(Char12) || char.IsUpper(Char13)
+                   || char.IsUpper(Char14) || char.IsUpper(Char15) || char.IsUpper(Char16) || char.IsUpper(Char17) || char.IsUpper(Char18) || char.IsUpper(Char19)
+                   || char.IsUpper(Char20) || char.IsUpper(Char21) || char.IsUpper(Char22) || char.IsUpper(Char23) || char.IsUpper(Char24) ||
+
+
+                 char.IsLower(Char1) || char.IsLower(Char2) || char.IsLower(Char3) || char.IsLower(Char4) || char.IsLower(Char5) || char.IsLower(Char6) || char.IsLower(Char7)
+                 || char.IsLower(Char8) || char.IsLower(Char9) || char.IsLower(Char10) || char.IsLower(Char11) || char.IsLower(Char12) || char.IsLower(Char13)
+                 || char.IsLower(Char14) || char.IsLower(Char15) || char.IsLower(Char16) || char.IsLower(Char17) || char.IsLower(Char18) || char.IsLower(Char19)
+                 || char.IsLower(Char20) || char.IsLower(Char21) || char.IsLower(Char22) || char.IsLower(Char23) || char.IsLower(Char24) ||
+
+                 Char1.ToString() == "+" || Char1.ToString() == "-" || Char1.ToString() == "(" || Char1.ToString() == ")" || Char1.ToString() == "&" || Char1.ToString() == "^" ||
+              Char1.ToString() == "%" || Char1.ToString() == "$" || Char1.ToString() == "£" /**/||/**/ Char2.ToString() == "+" || Char2.ToString() == "-" || Char2.ToString() == "(" ||
+              Char2.ToString() == ")" || Char2.ToString() == "&" || Char2.ToString() == "^" || Char2.ToString() == "%" || Char2.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+              Char3.ToString() == "+" || Char3.ToString() == "-" || Char3.ToString() == "(" || Char3.ToString() == ")" || Char3.ToString() == "&" || Char3.ToString() == "^" ||
+              Char3.ToString() == "%" || Char3.ToString() == "$" || Char3.ToString() == "£" /**/||/**/ Char4.ToString() == "+" || Char4.ToString() == "-" || Char4.ToString() == "(" ||
+              Char4.ToString() == ")" || Char4.ToString() == "&" || Char4.ToString() == "^" || Char4.ToString() == "%" || Char4.ToString() == "$" || Char4.ToString() == "£"/**/||/**/
+              Char5.ToString() == "+" || Char5.ToString() == "-" || Char5.ToString() == "(" || Char5.ToString() == ")" || Char5.ToString() == "&" || Char5.ToString() == "^" ||
+              Char5.ToString() == "%" || Char5.ToString() == "$" || Char5.ToString() == "£" /**/||/**/ Char6.ToString() == "+" || Char6.ToString() == "-" || Char6.ToString() == "(" ||
+              Char6.ToString() == ")" || Char6.ToString() == "&" || Char6.ToString() == "^" || Char6.ToString() == "%" || Char6.ToString() == "$" || Char6.ToString() == "£"/**/||/**/
+              Char7.ToString() == "+" || Char7.ToString() == "-" || Char7.ToString() == "(" || Char7.ToString() == ")" || Char7.ToString() == "&" || Char7.ToString() == "^" ||
+              Char7.ToString() == "%" || Char7.ToString() == "$" || Char7.ToString() == "£" /**/||/**/ Char8.ToString() == "+" || Char8.ToString() == "-" || Char8.ToString() == "(" ||
+              Char8.ToString() == ")" || Char8.ToString() == "&" || Char8.ToString() == "^" || Char8.ToString() == "%" || Char8.ToString() == "$" || Char8.ToString() == "£"/**/||/**/
+              Char9.ToString() == "+" || Char9.ToString() == "-" || Char9.ToString() == "(" || Char9.ToString() == ")" || Char9.ToString() == "&" || Char9.ToString() == "^" ||
+              Char9.ToString() == "%" || Char9.ToString() == "$" || Char9.ToString() == "£"/**/||/**/Char10.ToString() == "+" || Char10.ToString() == "-" || Char10.ToString() == "(" ||
+              Char10.ToString() == ")" || Char10.ToString() == "&" || Char10.ToString() == "^" || Char10.ToString() == "%" || Char10.ToString() == "$" || Char10.ToString() == "£"/**/||/**/
+              Char11.ToString() == "+" || Char11.ToString() == "-" || Char11.ToString() == "(" || Char11.ToString() == ")" || Char11.ToString() == "&" || Char11.ToString() == "^" ||
+              Char11.ToString() == "%" || Char11.ToString() == "$" || Char11.ToString() == "£" /**/||/**/Char12.ToString() == "+" || Char12.ToString() == "-" || Char12.ToString() == "(" ||
+              Char12.ToString() == ")" || Char12.ToString() == "&" || Char12.ToString() == "^" || Char12.ToString() == "%" || Char12.ToString() == "$" || Char12.ToString() == "£" ||
+              Char13.ToString() == "+" || Char13.ToString() == "-" || Char13.ToString() == "(" || Char13.ToString() == ")" || Char13.ToString() == "&" || Char13.ToString() == "^" ||
+              Char13.ToString() == "%" || Char13.ToString() == "$" || Char13.ToString() == "£" /**/||/**/ Char14.ToString() == "+" || Char14.ToString() == "-" || Char14.ToString() == "(" ||
+              Char14.ToString() == ")" || Char14.ToString() == "&" || Char14.ToString() == "^" || Char14.ToString() == "%" || Char14.ToString() == "$" || Char14.ToString() == "£"/**/||/**/
+              Char15.ToString() == "+" || Char15.ToString() == "-" || Char15.ToString() == "(" || Char15.ToString() == ")" || Char15.ToString() == "&" || Char15.ToString() == "^" ||
+              Char15.ToString() == "%" || Char15.ToString() == "$" || Char15.ToString() == "£" /**/||/**/ Char16.ToString() == "+" || Char16.ToString() == "-" || Char16.ToString() == "(" ||
+              Char16.ToString() == ")" || Char16.ToString() == "&" || Char16.ToString() == "^" || Char16.ToString() == "%" || Char16.ToString() == "$" || Char16.ToString() == "£"/**/||/**/
+              Char17.ToString() == "+" || Char17.ToString() == "-" || Char17.ToString() == "(" || Char17.ToString() == ")" || Char17.ToString() == "&" || Char17.ToString() == "^" ||
+              Char17.ToString() == "%" || Char17.ToString() == "$" || Char17.ToString() == "£" /**/||/**/ Char18.ToString() == "+" || Char18.ToString() == "-" || Char18.ToString() == "(" ||
+              Char18.ToString() == ")" || Char18.ToString() == "&" || Char18.ToString() == "^" || Char18.ToString() == "%" || Char18.ToString() == "$" || Char18.ToString() == "£"/**/||/**/
+              Char19.ToString() == "+" || Char19.ToString() == "-" || Char19.ToString() == "(" || Char19.ToString() == ")" || Char19.ToString() == "&" || Char19.ToString() == "^" ||
+              Char19.ToString() == "%" || Char19.ToString() == "$" || Char19.ToString() == "£" /**/||/**/ Char20.ToString() == "+" || Char20.ToString() == "-" || Char20.ToString() == "(" ||
+              Char20.ToString() == ")" || Char20.ToString() == "&" || Char20.ToString() == "^" || Char20.ToString() == "%" || Char20.ToString() == "$" || Char20.ToString() == "£"/**/||/**/
+              Char21.ToString() == "+" || Char21.ToString() == "-" || Char21.ToString() == "(" || Char21.ToString() == ")" || Char21.ToString() == "&" || Char21.ToString() == "^" ||
+              Char21.ToString() == "%" || Char21.ToString() == "$" || Char21.ToString() == "£"/**/||/**/Char22.ToString() == "+" || Char22.ToString() == "-" || Char22.ToString() == "(" ||
+              Char22.ToString() == ")" || Char22.ToString() == "&" || Char22.ToString() == "^" || Char22.ToString() == "%" || Char22.ToString() == "$" || Char2.ToString() == "£"/**/||/**/
+              Char23.ToString() == "+" || Char23.ToString() == "-" || Char23.ToString() == "(" || Char23.ToString() == ")" || Char23.ToString() == "&" || Char23.ToString() == "^" ||
+              Char23.ToString() == "%" || Char23.ToString() == "$" || Char23.ToString() == "£" /**/||/**/Char24.ToString() == "+" || Char24.ToString() == "-" || Char24.ToString() == "(" ||
+              Char24.ToString() == ")" || Char24.ToString() == "&" || Char24.ToString() == "^" || Char24.ToString() == "%" || Char24.ToString() == "$" || Char24.ToString() == "£"))
+                {
+                    Points = Points - 5;
+                }
+
+
+                if (!(char.IsUpper(Char1) || char.IsUpper(Char2) || char.IsUpper(Char3) || char.IsUpper(Char4) || char.IsUpper(Char5) || char.IsUpper(Char6) || char.IsUpper(Char7)
+                    || char.IsUpper(Char8) || char.IsUpper(Char9) || char.IsUpper(Char10) || char.IsUpper(Char11) || char.IsUpper(Char12) || char.IsUpper(Char13)
+                    || char.IsUpper(Char14) || char.IsUpper(Char15) || char.IsUpper(Char16) || char.IsUpper(Char17) || char.IsUpper(Char18) || char.IsUpper(Char19)
+                    || char.IsUpper(Char20) || char.IsUpper(Char21) || char.IsUpper(Char22) || char.IsUpper(Char23) || char.IsUpper(Char24) ||
+
+                    char.IsNumber(Char1) || char.IsNumber(Char2) || char.IsNumber(Char3) || char.IsNumber(Char4) || char.IsNumber(Char5) || char.IsNumber(Char6) || char.IsNumber(Char7)
+                  || char.IsNumber(Char8) || char.IsNumber(Char9) || char.IsNumber(Char10) || char.IsNumber(Char11) || char.IsNumber(Char12) || char.IsNumber(Char13)
+                  || char.IsNumber(Char14) || char.IsNumber(Char15) || char.IsNumber(Char16) || char.IsNumber(Char17) || char.IsNumber(Char18) || char.IsNumber(Char19)
+                  || char.IsNumber(Char20) || char.IsNumber(Char21) || char.IsNumber(Char22) || char.IsNumber(Char23) || char.IsNumber(Char24) ||
+
+                  char.IsLower(Char1) || char.IsLower(Char2) || char.IsLower(Char3) || char.IsLower(Char4) || char.IsLower(Char5) || char.IsLower(Char6) || char.IsLower(Char7)
+                  || char.IsLower(Char8) || char.IsLower(Char9) || char.IsLower(Char10) || char.IsLower(Char11) || char.IsLower(Char12) || char.IsLower(Char13)
+                  || char.IsLower(Char14) || char.IsLower(Char15) || char.IsLower(Char16) || char.IsLower(Char17) || char.IsLower(Char18) || char.IsLower(Char19)
+                  || char.IsLower(Char20) || char.IsLower(Char21) || char.IsLower(Char22) || char.IsLower(Char23) || char.IsLower(Char24)))
+                {
+                    Points = Points - 5;
+                }
+
+                //int p = 0;
+                //string nums = "1234567890";
+                //while (p == 0)
+                //{
+                //    for (int i = 0; i < nums.Length; i++)
+                //    {
+                //        if (Char1.ToString().Contains(nums[i]) || Char2.ToString().Contains(nums[i]) || Char3.ToString().Contains(nums[i]) || Char4.ToString().Contains(nums[i]) || Char5.ToString().Contains(nums[i]) ||
+                //            Char6.ToString().Contains(nums[i]) || Char7.ToString().Contains(nums[i]) || Char8.ToString().Contains(nums[i]) || Char9.ToString().Contains(nums[i]) || Char10.ToString().Contains(nums[i]) ||
+                //            Char11.ToString().Contains(nums[i]) || Char12.ToString().Contains(nums[i]) || Char13.ToString().Contains(nums[i]) || Char14.ToString().Contains(nums[i]) || Char15.ToString().Contains(nums[i]) ||
+                //            Char16.ToString().Contains(nums[i]) || Char17.ToString().Contains(nums[i]) || Char18.ToString().Contains(nums[i]) || Char19.ToString().Contains(nums[i]) || Char20.ToString().Contains(nums[i]) ||
+                //            Char21.ToString().Contains(nums[i]) || Char22.ToString().Contains(nums[i]) || Char23.ToString().Contains(nums[i]) || Char24.ToString().Contains(nums[i]))
+                //        {
+                //            Points = Points + 5;
+                //            p = p + 1;
+                //        }
+                //    }
+                //}
+
+                //Points = Points + 5;
+                
+                Points = Points + lenght + 1;
+                Console.WriteLine("");
+                Console.WriteLine("You scored " + Points + ", which means-");
+
+                Console.WriteLine();
+
+                if (Points >= 30)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("Your Password is one that rivals kings judgement!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                if (Points >= 20)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Your Password is a strong one!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                if (Points >= 1 && Points <= 19)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Your Password average in strength");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                if (Points <= 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Your Password is quite weak...");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
+                Console.WriteLine("");
+
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("Would you like to check your password again?");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                string Loop2 = Console.ReadLine();
+                Console.WriteLine("");
+
+                if (Loop2 == "Y" || Loop2 == "y" || Loop2 == "Yes" || Loop2 == "yes")
+                {
+                    Console.WriteLine("Lets redo this.");
+                    CheckPassword();
+                }
+
+                if (Loop2 == "N" || Loop2 == "n" || Loop2 == "No" || Loop2 == "no")
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("Sure, you'll be taken to the menu then.");
+                    Console.ForegroundColor= ConsoleColor.White;
+                    Console.WriteLine("");
+                    Questions();
+                }
+
+                Console.WriteLine();
+            }
+            //Console.ReadKey();
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        public static void Questions()
+        {
+            
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("1 - Check Password");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("2 - Generate Password");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("3 - Quit the program");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+
+                string UserInput = Console.ReadLine();
+                UserInput.ToString();
+
+            while (!(UserInput == "1" || UserInput == "2" || UserInput == "3"))
+            {
+                if (!(UserInput == "1" || UserInput == "2" || UserInput == "3"))
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine("Input a valid Answer");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("");
+                    UserInput = Console.ReadLine();
+                }
+            }
+
+            if (UserInput == "1")
+                {
+                    CheckPassword();
+                }
+                else if (UserInput == "2")
+                {
+                    GeneratePassword();
+                }
+                else if (UserInput == "3")
+                {
+                    Console.WriteLine("Okey the byeee! :)");
+                    Console.ReadKey();
+                    return;
+                }
+            
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("1 - Check Password");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("2 - Generate Password");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("3 - Quit the program");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+
+            string UserInput = Console.ReadLine();
+            UserInput.ToString();
+
+            Console.WriteLine("");
+            while (!(UserInput == "1" || UserInput == "2" || UserInput == "3"))
+            {
+                if (!(UserInput == "1" || UserInput == "2" || UserInput == "3"))
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine("Input a valid Answer");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("");
+                    UserInput = Console.ReadLine();
+                }
+            }
+
+            if(UserInput == "1")
+            {
+                CheckPassword();
+            }
+            else if(UserInput == "2")
+            {
+                GeneratePassword();
+            }
+            else if(UserInput == "3")
+            {
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Alr cya. :(");
+                Console.ReadKey();
+                return;
+            }
+           
+        }
+    }
+}
