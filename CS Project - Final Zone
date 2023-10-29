@@ -1,0 +1,476 @@
+namespace CS_Project_Final_Zone
+{
+    internal class Program
+    {
+        static void Checker()
+        {        
+            int Points = 0;
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("What is your password?");
+            Console.WriteLine();
+
+            string UserPassword = "                                                                     ";
+            UserPassword = Console.ReadLine();
+            UserPassword = UserPassword.ToString();         
+
+            int lenght = UserPassword.Length;
+            lenght = lenght - 1;
+
+            while (lenght < 7)
+            {
+                if (lenght < 7)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Password needs to be Longer");
+                    Console.WriteLine("Minimum character count is 8");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    UserPassword = Console.ReadLine();
+                    UserPassword = UserPassword.ToString();
+                    lenght = UserPassword.Length;
+                    lenght = lenght - 1;
+                }
+            }
+            while (lenght > 23)
+            {
+                if (lenght > 23)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Password needs to be Shorter");
+                    Console.WriteLine("Maximum character count is 24");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    UserPassword = Console.ReadLine();
+                    UserPassword = UserPassword.ToString();
+                    lenght = UserPassword.Length;
+                    lenght = lenght - 1;
+                }
+            }
+
+            char[] chars = new char[UserPassword.Length];
+
+            for (int i = 0; i < lenght; i++)
+            {
+                chars[i] = UserPassword[i];
+            }
+        
+            for (int i = 0; lenght > i; i++)
+            {
+                if (char.IsUpper(chars[i]))
+                {
+                    Points = Points + 5;                  
+                    i = i + lenght;
+                }
+            }
+
+            for (int i = 0; i < lenght; i++)
+            {
+                if (char.IsLower(chars[i]))
+                {
+                    Points = Points + 5;                 
+                    i = i + lenght;
+                }
+            }
+       
+            for (int i = 0; lenght > i; i++)
+            {
+                if (char.IsNumber(chars[i]))
+                {
+                    Points = Points + 5;                
+                    i = i + lenght;
+                }
+            }
+       
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if ("+-()&^%$£".Contains(chars[i]))
+                {
+                    Points = Points + 5;                   
+                    i = i + lenght;
+                }
+            }
+         
+            for (int i = 0; i < chars.Length; i++)
+            {
+                for (int k = 0; k < chars.Length; k++)
+                {
+                    for (int p = 0; p < chars.Length; p++)
+                    {
+                        for (int q = 0; q < chars.Length; q++)
+                        {
+                            if (char.IsUpper(chars[i]) && char.IsNumber(chars[k]) && char.IsLower(chars[p]) && ("+-()&^%$£".Contains(chars[q])))
+                            {
+                                Points = Points + 10;
+                                i = i + lenght;
+                                k = k + lenght;
+                                p = p + lenght;
+                                q = q + lenght;
+                            }
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (char.IsUpper(chars[i]) && char.IsLower(chars[i]) && !char.IsNumber(chars[i]) && !"+-()&^%$£".Contains(chars[i]))
+                {
+                    Points = Points - 5;                   
+                    i = i + chars.Length;
+                }
+            }
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (!char.IsNumber(chars[i]) && char.IsLower(chars[i]) && char.IsUpper(chars[i]) && "+-()&^%$£".Contains(chars[i]))
+                {
+                    Points = Points - 5;               
+                    i = i + chars.Length;
+                }
+            }
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if ("+-()&^%$£".Contains(chars[i]) && !char.IsUpper(chars[i]) && !char.IsLower(chars[i]) && !char.IsNumber(chars[i]))
+                {
+                    Points = Points - 5;                  
+                    i = i + chars.Length;
+                }
+            }
+
+            string KeyboardLayout = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"; 
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                for (int k = 0; k < chars.Length; k++)
+                {
+                    if (chars[i] == KeyboardLayout[k] && chars[i + 1] == KeyboardLayout[k + 1] && chars[i + 2] == KeyboardLayout[k + 2])
+                    {
+                        Points = Points - 5;                  
+                        break;
+                    }
+                }
+            }
+
+            Points = Points + lenght + 1;
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("You scored a... '");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(Points);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("', which means-");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.ReadLine();
+
+            if (Points >= 30)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Your Password is one that rivals kings judgment!");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine();
+                Console.WriteLine("---------------------------------------------");
+                Console.ReadLine();
+                Questions();
+            }
+            if (Points >= 20)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Your Password is a strong one!");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine("|");
+                Console.ReadLine();
+                Questions();
+            }
+            if (Points >= 1 && Points <= 19)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Your Password average in strength");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine();
+                Console.WriteLine("---------------------------------------------");
+                Console.ReadLine();
+                Questions();
+            }
+            if (Points <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Your Password is quite weak...");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine();
+                Console.WriteLine("---------------------------------------------");
+                Console.ReadLine();
+                Questions();
+            }     
+            Console.ReadKey();
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        static void Generator()
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Would you like to Generate a Randomized Password?");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Y");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("/");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write("N");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            string Y = Console.ReadLine();
+            string Loop = "";
+
+            while (!(Y == "Y" || Y == "Yes" || Y == "y" || Y == "yes" || Y == "N" || Y == "n" || Y == "No" || Y == "no"))
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("Input a valid answer.");
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.White;
+                Y = Console.ReadLine();
+            }
+            if (Y == "Y" || Y == "Yes" || Y == "y" || Y == "yes")
+            {
+                //string PasswordChoice = "abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890";
+                string PasswordChoice = "0987654321!$%^&()-_=+abcdefghijkmnlopqrstuvwxyz1234567890ABCDEFGHIKMNLOPQRSTUVWXYZ!$%^&()-_=+1234567890abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890!$%^&()-_=+";
+
+                Random numgen = new Random();
+
+                int num = numgen.Next(0, PasswordChoice.Length);
+                int num2 = numgen.Next(0, PasswordChoice.Length);
+                int num3 = numgen.Next(0, PasswordChoice.Length);
+                int num4 = numgen.Next(0, PasswordChoice.Length);
+                int num5 = numgen.Next(0, PasswordChoice.Length);
+                int num6 = numgen.Next(0, PasswordChoice.Length);
+                int num7 = numgen.Next(0, PasswordChoice.Length);
+                int num8 = numgen.Next(0, PasswordChoice.Length);
+                int num9 = numgen.Next(0, PasswordChoice.Length);
+                int num10 = numgen.Next(0, PasswordChoice.Length);
+                int num11 = numgen.Next(0, PasswordChoice.Length);
+                int num12 = numgen.Next(0, PasswordChoice.Length);
+               
+                var Char1 = PasswordChoice[num];
+                var Char2 = PasswordChoice[num2];
+                var Char3 = PasswordChoice[num3];
+                var Char4 = PasswordChoice[num4];
+                var Char5 = PasswordChoice[num5];
+                var Char6 = PasswordChoice[num6];
+                var Char7 = PasswordChoice[num7];
+                var Char8 = PasswordChoice[num8];
+                var Char9 = PasswordChoice[num9];
+                var Char10 = PasswordChoice[num10];
+                var Char11 = PasswordChoice[num11];
+                var Char12 = PasswordChoice[num12];
+               
+
+                string GenPass = Char1 + "" + Char2 + "" + Char3 + "" + Char4 + "" + Char5 + "" + Char6 + "" + Char7 + "" + Char8 + "" + Char9 + "" + Char10 + "" +
+                                     Char11 + "" + Char12; //+ "" + Char13 + "" + Char14 + "" + Char15 + "" + Char16 + "" + Char17 + "" + Char18 + "" + Char19 + "" + Char20;
+
+                Console.WriteLine("");
+                Console.WriteLine("Generated Password: " + GenPass);
+                Console.Write("Would you like to Generate a ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("New Password");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("?");
+                Console.WriteLine("");
+
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Y");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("/");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("N");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Loop = Console.ReadLine();
+            }
+
+            else if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no" /* */||/* */ Y == "N" || Y == "n" || Y == "No" || Y == "no")
+
+            {
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine();
+                Console.WriteLine("---------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadLine();
+                Questions();
+            }
+
+            while (!(Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes" || Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no"))
+            {
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("Input a valid answer.");
+                Console.WriteLine("");
+                Console.ForegroundColor = ConsoleColor.White;
+                Loop = Console.ReadLine();
+            }
+
+            while (Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes")
+            {
+                //string PasswordChoice = "abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890";
+                string PasswordChoice = "0987654321!$%^&()-_=+abcdefghijkmnlopqrstuvwxyz1234567890ABCDEFGHIKMNLOPQRSTUVWXYZ!$%^&()-_=+1234567890abcdefghijkmnlopqrstuvwxyzABCEFGHIJKMNLOPQRSTUVWXYZ1234567890!$%^&()-_=+";
+
+                Random numgen = new Random();
+
+                int num = numgen.Next(0, PasswordChoice.Length);
+                int num2 = numgen.Next(0, PasswordChoice.Length);
+                int num3 = numgen.Next(0, PasswordChoice.Length);
+                int num4 = numgen.Next(0, PasswordChoice.Length);
+                int num5 = numgen.Next(0, PasswordChoice.Length);
+                int num6 = numgen.Next(0, PasswordChoice.Length);
+                int num7 = numgen.Next(0, PasswordChoice.Length);
+                int num8 = numgen.Next(0, PasswordChoice.Length);
+                int num9 = numgen.Next(0, PasswordChoice.Length);
+                int num10 = numgen.Next(0, PasswordChoice.Length);
+                int num11 = numgen.Next(0, PasswordChoice.Length);
+                int num12 = numgen.Next(0, PasswordChoice.Length);            
+
+                var Char1 = PasswordChoice[num];
+                var Char2 = PasswordChoice[num2];
+                var Char3 = PasswordChoice[num3];
+                var Char4 = PasswordChoice[num4];
+                var Char5 = PasswordChoice[num5];
+                var Char6 = PasswordChoice[num6];
+                var Char7 = PasswordChoice[num7];
+                var Char8 = PasswordChoice[num8];
+                var Char9 = PasswordChoice[num9];
+                var Char10 = PasswordChoice[num10];
+                var Char11 = PasswordChoice[num11];
+                var Char12 = PasswordChoice[num12];                
+
+                string GenPass = Char1 + "" + Char2 + "" + Char3 + "" + Char4 + "" + Char5 + "" + Char6 + "" + Char7 + "" + Char8 + "" + Char9 + "" + Char10 + "" +
+                                 Char11 + "" + Char12; //+ "" + Char13 + "" + Char14 + "" + Char15 + "" + Char16 + "" + Char17 + "" + Char18 + "" + Char19 + "" + Char20;
+
+                Console.WriteLine("");
+                Console.WriteLine("Generated Password: " + GenPass);
+                Console.Write("Would you like to Generate a ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("New Password");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("?");
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("Y");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("/");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("N");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Loop = Console.ReadLine();
+
+                while (!(Loop == "Y" || Loop == "Yes" || Loop == "y" || Loop == "yes" || Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no"))
+                {
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("Input a valid answer.");
+                    Console.WriteLine("");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Loop = Console.ReadLine();
+                }
+
+                if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("You will be taken back to the menu.");
+                    Console.WriteLine();
+                    Console.WriteLine("---------------------------------------------");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadKey();
+                    Questions();
+                }
+            }
+
+            if (Loop == "N" || Loop == "n" || Loop == "No" || Loop == "no")
+            {
+
+                Console.WriteLine("");
+                Console.WriteLine("You will be taken back to the menu.");
+                Console.WriteLine();
+                Console.WriteLine("---------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadKey();
+                Questions();
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        static void Questions()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine();
+            Console.WriteLine("1 - Check a Password");
+            Console.WriteLine("2 - Generate a Password");
+            Console.WriteLine("3 - Close the Program");
+            Console.WriteLine();
+
+            string UserInput = Console.ReadLine();
+            UserInput.ToString();
+
+            while (!(UserInput == "1" || UserInput == "2" || UserInput == "3")) 
+            {
+                if (!(UserInput == "1" || UserInput == "2" || UserInput == "3"))
+                {
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine();
+                    Console.WriteLine("Enter a valid answer.");
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    UserInput = Console.ReadLine();
+                    UserInput.ToString();
+                }
+            }
+
+            if (UserInput == "1")
+            {
+                Checker();
+            }
+            else if (UserInput == "2")
+            {
+                Generator();
+            }
+            else if (UserInput == "3")
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine();
+                Console.WriteLine("The program will close now.");
+                Console.ReadKey();
+                Console.ForegroundColor = ConsoleColor.White;
+                break;
+                return;
+            }          
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+        static void Main(string[] args)
+        {
+            Questions();           
+        }
+    }
+}
